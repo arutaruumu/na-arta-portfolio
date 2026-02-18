@@ -1,10 +1,10 @@
+import TextType from "../components/TextType";
+
 export default function GameAssetPage() {
   return (
     <main className="bg-black text-white">
-
       {/* HERO */}
       <section className="relative h-[80vh] w-full">
-
         {/* Background Image */}
         <img
           src="/gamedesign.jpg"
@@ -18,8 +18,25 @@ export default function GameAssetPage() {
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-center h-full px-10 md:px-20">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Game Asset Design<br />
-            <span className="italic font-light">Creating stylized visual worlds</span>
+            Game Asset Design
+            <br />
+            <TextType
+              className="italic font-light"
+              text={[
+                "Create stylized assets for immersive digital worlds",
+                "Artistic detail meets technical precision",
+                "Every asset is crafted for both beauty and integration",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor
+              cursorCharacter="_"
+              deletingSpeed={50}
+              variableSpeedEnabled={false}
+              variableSpeedMin={60}
+              variableSpeedMax={120}
+              cursorBlinkDuration={0.5}
+            />
           </h1>
 
           <p className="mt-6 max-w-xl text-gray-300">
@@ -43,10 +60,49 @@ export default function GameAssetPage() {
         </div>
       </section>
 
+      {/* WORK PROCESS */}
+      <section className="py-24 px-10 md:px-20 bg-zinc-950">
+        <div className="mb-16">
+          <p className="text-sm text-gray-500 mb-2">(Process)</p>
+          <h2 className="text-3xl font-semibold">Design Approach</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-12">
+          <div>
+            <span className="text-gray-600 text-sm">01</span>
+            <h3 className="text-xl font-semibold mt-4 mb-4">
+              Concept & Moodboard
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Understanding user behavior, pain points, and interaction context.
+            </p>
+          </div>
+
+          <div>
+            <span className="text-gray-600 text-sm">02</span>
+            <h3 className="text-xl font-semibold mt-4 mb-4">
+              Sketch & Modeling
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Building structured layouts and consistent design systems.
+            </p>
+          </div>
+
+          <div>
+            <span className="text-gray-600 text-sm">03</span>
+            <h3 className="text-xl font-semibold mt-4 mb-4">
+              Render & Integration
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Polishing typography, spacing, and micro-interactions.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* PROJECT LIST */}
       <section className="pb-32 px-10 md:px-20">
         <div className="grid md:grid-cols-2 gap-10">
-
           {/* PROJECT CARD */}
           <div className="group border border-white/10 rounded-3xl overflow-hidden hover:border-white/30 transition">
             <div className="relative h-72 overflow-hidden">
@@ -71,10 +127,8 @@ export default function GameAssetPage() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
-
     </main>
   );
 }

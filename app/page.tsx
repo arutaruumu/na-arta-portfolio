@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import TextType from "./components/TextType";
 
 export default function Home() {
   return (
@@ -37,7 +38,28 @@ export default function Home() {
         <div className="relative z-10 flex flex-col justify-center h-full px-10 md:px-20">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Where ideas grow <br />
-            <span className="italic font-light">in every detail.</span>
+            <TextType
+              className="italic font-light"
+              text={[
+                "into meaningful systems.",
+                "beyond imagination.",
+                "with clarity and purpose.",
+                "in every detail.",
+                "into digital experiences.",
+                "through logic and design.",
+                "into scalable innovation.",
+                "between code and creativity.",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor
+              cursorCharacter="_"
+              deletingSpeed={50}
+              variableSpeedEnabled={false}
+              variableSpeedMin={60}
+              variableSpeedMax={120}
+              cursorBlinkDuration={0.5}
+            />
           </h1>
 
           <p className="mt-6 max-w-lg text-gray-300">

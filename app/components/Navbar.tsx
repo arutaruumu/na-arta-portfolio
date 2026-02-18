@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { poppins } from "@/lib/fonts";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,8 +23,8 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <h1 className="font-bold tracking-widest text-white">
-        NA ARTA
+      <h1 className={`${poppins.className} font-bold tracking-widest text-white`}>
+        nada satya m.
       </h1>
 
       <div className="hidden md:flex gap-8 text-sm text-white">
